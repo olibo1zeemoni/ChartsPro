@@ -2,20 +2,14 @@
 //  ContentView.swift
 //  ChartsPro
 //
-//  Created by Olibo moni on 08/08/2024.
+//  Created by Olibo moni on 09/08/2024.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
