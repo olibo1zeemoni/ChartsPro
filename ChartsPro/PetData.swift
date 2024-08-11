@@ -11,8 +11,8 @@ import Foundation
 struct PetData: Identifiable, Equatable {
     let year: Int
     
-    // population is in million
     let population: Double
+    // population is in million
     
     var id: Int { year }
     
@@ -23,7 +23,7 @@ struct PetData: Identifiable, Equatable {
          PetData(year: 2022, population: 15.2)]
     }
     
-    static var dogExamples: [PetData] {
+    static var dogExample: [PetData] {
         [PetData(year: 2000, population: 5),
          PetData(year: 2010, population: 5.3),
          PetData(year: 2015, population: 7.9),

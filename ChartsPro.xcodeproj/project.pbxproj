@@ -14,6 +14,12 @@
 		F5ECABAC2C65CDCE009BAD9D /* DynamicChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ECABAB2C65CDCE009BAD9D /* DynamicChartView.swift */; };
 		F5ECABAE2C65E18C009BAD9D /* PetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ECABAD2C65E18C009BAD9D /* PetData.swift */; };
 		F5ECABB02C65E258009BAD9D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ECABAF2C65E258009BAD9D /* ContentView.swift */; };
+		F5ECABB22C65E6D9009BAD9D /* PetStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ECABB12C65E6D9009BAD9D /* PetStatisticsView.swift */; };
+		F5ECABB52C6700E3009BAD9D /* PointChartExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ECABB42C6700E3009BAD9D /* PointChartExampleView.swift */; };
+		F5ECABB72C670145009BAD9D /* BarChartExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ECABB62C670145009BAD9D /* BarChartExampleView.swift */; };
+		F5ECABB92C67017F009BAD9D /* LineChartExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ECABB82C67017F009BAD9D /* LineChartExampleView.swift */; };
+		F5ECABBB2C675B1E009BAD9D /* RectangularChartExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ECABBA2C675B1E009BAD9D /* RectangularChartExample.swift */; };
+		F5ECABBD2C676E2A009BAD9D /* PieChartExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ECABBC2C676E2A009BAD9D /* PieChartExampleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +31,12 @@
 		F5ECABAB2C65CDCE009BAD9D /* DynamicChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicChartView.swift; sourceTree = "<group>"; };
 		F5ECABAD2C65E18C009BAD9D /* PetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetData.swift; sourceTree = "<group>"; };
 		F5ECABAF2C65E258009BAD9D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F5ECABB12C65E6D9009BAD9D /* PetStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetStatisticsView.swift; sourceTree = "<group>"; };
+		F5ECABB42C6700E3009BAD9D /* PointChartExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointChartExampleView.swift; sourceTree = "<group>"; };
+		F5ECABB62C670145009BAD9D /* BarChartExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartExampleView.swift; sourceTree = "<group>"; };
+		F5ECABB82C67017F009BAD9D /* LineChartExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartExampleView.swift; sourceTree = "<group>"; };
+		F5ECABBA2C675B1E009BAD9D /* RectangularChartExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangularChartExample.swift; sourceTree = "<group>"; };
+		F5ECABBC2C676E2A009BAD9D /* PieChartExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartExampleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +70,12 @@
 			isa = PBXGroup;
 			children = (
 				F5D92CB62C64F3F1001F8315 /* ChartsProApp.swift */,
+				F5ECABAF2C65E258009BAD9D /* ContentView.swift */,
 				F5D92CB82C64F3F1001F8315 /* StaticChartView.swift */,
 				F5ECABAB2C65CDCE009BAD9D /* DynamicChartView.swift */,
-				F5ECABAF2C65E258009BAD9D /* ContentView.swift */,
+				F5ECABB32C67006B009BAD9D /* Chart Types */,
 				F5ECABAD2C65E18C009BAD9D /* PetData.swift */,
+				F5ECABB12C65E6D9009BAD9D /* PetStatisticsView.swift */,
 				F5D92CBA2C64F3F3001F8315 /* Assets.xcassets */,
 				F5D92CBC2C64F3F3001F8315 /* Preview Content */,
 			);
@@ -74,6 +88,18 @@
 				F5D92CBD2C64F3F3001F8315 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F5ECABB32C67006B009BAD9D /* Chart Types */ = {
+			isa = PBXGroup;
+			children = (
+				F5ECABB42C6700E3009BAD9D /* PointChartExampleView.swift */,
+				F5ECABB62C670145009BAD9D /* BarChartExampleView.swift */,
+				F5ECABBA2C675B1E009BAD9D /* RectangularChartExample.swift */,
+				F5ECABBC2C676E2A009BAD9D /* PieChartExampleView.swift */,
+				F5ECABB82C67017F009BAD9D /* LineChartExampleView.swift */,
+			);
+			path = "Chart Types";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +173,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5D92CB92C64F3F1001F8315 /* StaticChartView.swift in Sources */,
+				F5ECABB52C6700E3009BAD9D /* PointChartExampleView.swift in Sources */,
+				F5ECABB72C670145009BAD9D /* BarChartExampleView.swift in Sources */,
+				F5ECABB92C67017F009BAD9D /* LineChartExampleView.swift in Sources */,
 				F5ECABB02C65E258009BAD9D /* ContentView.swift in Sources */,
 				F5ECABAC2C65CDCE009BAD9D /* DynamicChartView.swift in Sources */,
+				F5ECABBD2C676E2A009BAD9D /* PieChartExampleView.swift in Sources */,
+				F5ECABBB2C675B1E009BAD9D /* RectangularChartExample.swift in Sources */,
+				F5ECABB22C65E6D9009BAD9D /* PetStatisticsView.swift in Sources */,
 				F5D92CB72C64F3F1001F8315 /* ChartsProApp.swift in Sources */,
 				F5ECABAE2C65E18C009BAD9D /* PetData.swift in Sources */,
 			);
