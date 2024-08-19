@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F57049672C6DCE1F0069B1AC /* DailySalesChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57049662C6DCE1F0069B1AC /* DailySalesChartView.swift */; };
+		F57049692C6DCE2D0069B1AC /* WeeklySalesChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57049682C6DCE2D0069B1AC /* WeeklySalesChartView.swift */; };
+		F570496B2C6DCE3B0069B1AC /* MonthlySalesChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F570496A2C6DCE3B0069B1AC /* MonthlySalesChartView.swift */; };
+		F570496D2C6DE0FA0069B1AC /* SimpleBookSalesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F570496C2C6DE0FA0069B1AC /* SimpleBookSalesView.swift */; };
+		F570496F2C6E006D0069B1AC /* DetailBookSalesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F570496E2C6E006D0069B1AC /* DetailBookSalesView.swift */; };
 		F5D92CB72C64F3F1001F8315 /* ChartsProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D92CB62C64F3F1001F8315 /* ChartsProApp.swift */; };
 		F5D92CB92C64F3F1001F8315 /* StaticChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D92CB82C64F3F1001F8315 /* StaticChartView.swift */; };
 		F5D92CBB2C64F3F3001F8315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D92CBA2C64F3F3001F8315 /* Assets.xcassets */; };
@@ -29,6 +34,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F57049662C6DCE1F0069B1AC /* DailySalesChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySalesChartView.swift; sourceTree = "<group>"; };
+		F57049682C6DCE2D0069B1AC /* WeeklySalesChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklySalesChartView.swift; sourceTree = "<group>"; };
+		F570496A2C6DCE3B0069B1AC /* MonthlySalesChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlySalesChartView.swift; sourceTree = "<group>"; };
+		F570496C2C6DE0FA0069B1AC /* SimpleBookSalesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBookSalesView.swift; sourceTree = "<group>"; };
+		F570496E2C6E006D0069B1AC /* DetailBookSalesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookSalesView.swift; sourceTree = "<group>"; };
 		F5D92CB32C64F3F1001F8315 /* ChartsPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartsPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D92CB62C64F3F1001F8315 /* ChartsProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsProApp.swift; sourceTree = "<group>"; };
 		F5D92CB82C64F3F1001F8315 /* StaticChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticChartView.swift; sourceTree = "<group>"; };
@@ -62,6 +72,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F57049612C6DCD310069B1AC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F57049652C6DCD980069B1AC /* expenses stats */,
+				F57049642C6DCD890069B1AC /* book category stats */,
+				F57049632C6DCD790069B1AC /* weekday stats */,
+				F57049622C6DCD650069B1AC /* sales stats */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F57049622C6DCD650069B1AC /* sales stats */ = {
+			isa = PBXGroup;
+			children = (
+				F57049662C6DCE1F0069B1AC /* DailySalesChartView.swift */,
+				F57049682C6DCE2D0069B1AC /* WeeklySalesChartView.swift */,
+				F570496C2C6DE0FA0069B1AC /* SimpleBookSalesView.swift */,
+				F570496A2C6DCE3B0069B1AC /* MonthlySalesChartView.swift */,
+				F570496E2C6E006D0069B1AC /* DetailBookSalesView.swift */,
+			);
+			path = "sales stats";
+			sourceTree = "<group>";
+		};
+		F57049632C6DCD790069B1AC /* weekday stats */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "weekday stats";
+			sourceTree = "<group>";
+		};
+		F57049642C6DCD890069B1AC /* book category stats */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "book category stats";
+			sourceTree = "<group>";
+		};
+		F57049652C6DCD980069B1AC /* expenses stats */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "expenses stats";
+			sourceTree = "<group>";
+		};
 		F5D92CAA2C64F3F1001F8315 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +137,7 @@
 			children = (
 				F5D92CB62C64F3F1001F8315 /* ChartsProApp.swift */,
 				F5ECABAF2C65E258009BAD9D /* ContentView.swift */,
+				F57049612C6DCD310069B1AC /* Views */,
 				F5ECABCB2C6BB82E009BAD9D /* ViewModel */,
 				F5ECABC02C694F2E009BAD9D /* Model */,
 				F5ECABBF2C694EBC009BAD9D /* Advanced */,
@@ -222,14 +277,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F57049692C6DCE2D0069B1AC /* WeeklySalesChartView.swift in Sources */,
+				F570496F2C6E006D0069B1AC /* DetailBookSalesView.swift in Sources */,
 				F5ECABCA2C69C664009BAD9D /* Expense.swift in Sources */,
 				F5D92CB92C64F3F1001F8315 /* StaticChartView.swift in Sources */,
+				F57049672C6DCE1F0069B1AC /* DailySalesChartView.swift in Sources */,
 				F5ECABB52C6700E3009BAD9D /* PointChartExampleView.swift in Sources */,
 				F5ECABC62C6955BB009BAD9D /* Book.swift in Sources */,
 				F5ECABB72C670145009BAD9D /* BarChartExampleView.swift in Sources */,
 				F5ECABB92C67017F009BAD9D /* LineChartExampleView.swift in Sources */,
 				F5ECABC82C6957EA009BAD9D /* Sale.swift in Sources */,
 				F5ECABB02C65E258009BAD9D /* ContentView.swift in Sources */,
+				F570496B2C6DCE3B0069B1AC /* MonthlySalesChartView.swift in Sources */,
 				F5ECABAC2C65CDCE009BAD9D /* DynamicChartView.swift in Sources */,
 				F5ECABC22C694FA2009BAD9D /* BookCategory.swift in Sources */,
 				F5ECABBD2C676E2A009BAD9D /* PieChartExampleView.swift in Sources */,
@@ -238,6 +297,7 @@
 				F5ECABC42C695439009BAD9D /* Author.swift in Sources */,
 				F5ECABB22C65E6D9009BAD9D /* PetStatisticsView.swift in Sources */,
 				F5D92CB72C64F3F1001F8315 /* ChartsProApp.swift in Sources */,
+				F570496D2C6DE0FA0069B1AC /* SimpleBookSalesView.swift in Sources */,
 				F5ECABAE2C65E18C009BAD9D /* PetData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
