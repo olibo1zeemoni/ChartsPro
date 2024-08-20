@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var salesViewModel = SalesViewModel.preview
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            List {
+                NavigationLink {
+                    DetailBookSalesView(salesViewModel: salesViewModel)
+                        .navigationBarTitleDisplayMode(.inline)
+
+                } label: {
+                    SimpleBookSalesView(salesViewModel: salesViewModel)
+                }
+
+            }
+            .navigationTitle("Your Book Store Stats")
+
+        }
     }
 }
 

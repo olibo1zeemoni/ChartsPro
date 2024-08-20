@@ -14,11 +14,11 @@ struct DetailBookSalesView: View {
         case month = "Month"
         var id: Self { self }
     }
-    @ObservedObject var salesViewMode: SalesViewModel
+    @ObservedObject var salesViewModel: SalesViewModel
     @State private var selectedTimeInterval = TimeInterval.day
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Picker(selection: $selectedTimeInterval.animation()) {
                 ForEach(TimeInterval.allCases){ interval in
                     Text(interval.rawValue)
@@ -30,7 +30,7 @@ struct DetailBookSalesView: View {
             
             Group {
                 Text("You sold ") +
-                Text("\(salesViewMode.totalSales) books")
+                Text("\(salesViewModel.totalSales) books")
                     .bold().foregroundStyle(Color.accentColor) +
                 Text(" in the last 90 days")
             }.padding(.vertical)
@@ -38,19 +38,20 @@ struct DetailBookSalesView: View {
             Group{
                 switch selectedTimeInterval {
                 case .day:
-                    DailySalesChartView(salesData: salesViewMode.salesData)
+                    DailySalesChartView(salesData: salesViewModel.salesData)
                 case .week:
-                    WeeklySalesChartView(salesDataVM: salesViewMode)
+                    WeeklySalesChartView(salesDataVM: salesViewModel)
                 case .month:
-                    MonthlySalesChartView(salesData: salesViewMode.salesData)
+                    MonthlySalesChartView(salesData: salesViewModel.salesData)
                 }
             }
             .aspectRatio(0.9, contentMode: .fit)
+            Spacer()
         }
         .padding()
     }
 }
 
 #Preview {
-    DetailBookSalesView(salesViewMode: .preview)
+    DetailBookSalesView(salesViewModel: .preview)
 }
