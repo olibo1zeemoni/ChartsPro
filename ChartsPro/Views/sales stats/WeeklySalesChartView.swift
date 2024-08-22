@@ -21,7 +21,6 @@ struct WeeklySalesChartView: View {
                 let startOfWeek = $0.day
                 let endOfWeek = endOfWeek(for: startOfWeek) ?? Date()
                 let toReturn = (startOfWeek ... endOfWeek).contains(rawSelectedDate)
-                //print(toReturn)
                 return toReturn
             })
         }
@@ -34,8 +33,10 @@ struct WeeklySalesChartView: View {
         Chart{
             ForEach(salesDataVM.salesByWeek, id: \.day) { sale in
                 BarMark(x: .value("Week", sale.day, unit: .weekOfYear), y: .value("Sales", sale.sales))
+                    .foregroundStyle(.blue.gradient)
+                    .opacity(selectedDateValue == nil || selectedDateValue?.day == sale.day ? 1 : 0.5)
             }
-            .foregroundStyle(.blue.gradient)
+            
             
             if let rawSelectedDate {
                 RuleMark(x: .value("Selected Date", rawSelectedDate, unit: .day))
@@ -63,7 +64,13 @@ struct WeeklySalesChartView: View {
         if let selectedDateValue {
             VStack(alignment: .leading) {
                 Text("\(selectedDateValue.day .formatted(.dateTime.day().month()))")
-                Text("\(selectedDateValue.sales)")
+                Text("\(selectedDateValue.sales) sales")
+            }
+            .padding(6)
+            .background {
+                RoundedRectangle(cornerRadius: 4)
+                    .fill(.white)
+                    .shadow(color: .blue, radius: 2)
             }
         }
     }

@@ -12,6 +12,9 @@
 		F570496B2C6DCE3B0069B1AC /* MonthlySalesChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F570496A2C6DCE3B0069B1AC /* MonthlySalesChartView.swift */; };
 		F570496D2C6DE0FA0069B1AC /* SimpleBookSalesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F570496C2C6DE0FA0069B1AC /* SimpleBookSalesView.swift */; };
 		F570496F2C6E006D0069B1AC /* DetailBookSalesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F570496E2C6E006D0069B1AC /* DetailBookSalesView.swift */; };
+		F5D122282C7589C900138BE2 /* SalesByWeekdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D122272C7589C900138BE2 /* SalesByWeekdayView.swift */; };
+		F5D1222A2C7589DC00138BE2 /* SimpleSalesByWeekdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D122292C7589DC00138BE2 /* SimpleSalesByWeekdayView.swift */; };
+		F5D1222C2C75960500138BE2 /* SalesByWeekdayHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D1222B2C75960500138BE2 /* SalesByWeekdayHeaderView.swift */; };
 		F5D92CB72C64F3F1001F8315 /* ChartsProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D92CB62C64F3F1001F8315 /* ChartsProApp.swift */; };
 		F5D92CB92C64F3F1001F8315 /* StaticChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D92CB82C64F3F1001F8315 /* StaticChartView.swift */; };
 		F5D92CBB2C64F3F3001F8315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D92CBA2C64F3F3001F8315 /* Assets.xcassets */; };
@@ -39,6 +42,9 @@
 		F570496A2C6DCE3B0069B1AC /* MonthlySalesChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlySalesChartView.swift; sourceTree = "<group>"; };
 		F570496C2C6DE0FA0069B1AC /* SimpleBookSalesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBookSalesView.swift; sourceTree = "<group>"; };
 		F570496E2C6E006D0069B1AC /* DetailBookSalesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookSalesView.swift; sourceTree = "<group>"; };
+		F5D122272C7589C900138BE2 /* SalesByWeekdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesByWeekdayView.swift; sourceTree = "<group>"; };
+		F5D122292C7589DC00138BE2 /* SimpleSalesByWeekdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSalesByWeekdayView.swift; sourceTree = "<group>"; };
+		F5D1222B2C75960500138BE2 /* SalesByWeekdayHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesByWeekdayHeaderView.swift; sourceTree = "<group>"; };
 		F5D92CB32C64F3F1001F8315 /* ChartsPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartsPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D92CB62C64F3F1001F8315 /* ChartsProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsProApp.swift; sourceTree = "<group>"; };
 		F5D92CB82C64F3F1001F8315 /* StaticChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticChartView.swift; sourceTree = "<group>"; };
@@ -98,6 +104,9 @@
 		F57049632C6DCD790069B1AC /* weekday stats */ = {
 			isa = PBXGroup;
 			children = (
+				F5D122272C7589C900138BE2 /* SalesByWeekdayView.swift */,
+				F5D122292C7589DC00138BE2 /* SimpleSalesByWeekdayView.swift */,
+				F5D1222B2C75960500138BE2 /* SalesByWeekdayHeaderView.swift */,
 			);
 			path = "weekday stats";
 			sourceTree = "<group>";
@@ -286,15 +295,18 @@
 				F5ECABC62C6955BB009BAD9D /* Book.swift in Sources */,
 				F5ECABB72C670145009BAD9D /* BarChartExampleView.swift in Sources */,
 				F5ECABB92C67017F009BAD9D /* LineChartExampleView.swift in Sources */,
+				F5D122282C7589C900138BE2 /* SalesByWeekdayView.swift in Sources */,
 				F5ECABC82C6957EA009BAD9D /* Sale.swift in Sources */,
 				F5ECABB02C65E258009BAD9D /* ContentView.swift in Sources */,
 				F570496B2C6DCE3B0069B1AC /* MonthlySalesChartView.swift in Sources */,
 				F5ECABAC2C65CDCE009BAD9D /* DynamicChartView.swift in Sources */,
 				F5ECABC22C694FA2009BAD9D /* BookCategory.swift in Sources */,
+				F5D1222C2C75960500138BE2 /* SalesByWeekdayHeaderView.swift in Sources */,
 				F5ECABBD2C676E2A009BAD9D /* PieChartExampleView.swift in Sources */,
 				F5ECABCD2C6C2E69009BAD9D /* SalesViewModel.swift in Sources */,
 				F5ECABBB2C675B1E009BAD9D /* RectangularChartExample.swift in Sources */,
 				F5ECABC42C695439009BAD9D /* Author.swift in Sources */,
+				F5D1222A2C7589DC00138BE2 /* SimpleSalesByWeekdayView.swift in Sources */,
 				F5ECABB22C65E6D9009BAD9D /* PetStatisticsView.swift in Sources */,
 				F5D92CB72C64F3F1001F8315 /* ChartsProApp.swift in Sources */,
 				F570496D2C6DE0FA0069B1AC /* SimpleBookSalesView.swift in Sources */,

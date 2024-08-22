@@ -13,17 +13,30 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
-                NavigationLink {
-                    DetailBookSalesView(salesViewModel: salesViewModel)
-                        .navigationBarTitleDisplayMode(.inline)
-
-                } label: {
-                    SimpleBookSalesView(salesViewModel: salesViewModel)
+                Section {
+                    NavigationLink {
+                        DetailBookSalesView(salesViewModel: salesViewModel)
+                            .navigationBarTitleDisplayMode(.inline)
+                        
+                    } label: {
+                        SimpleBookSalesView(salesViewModel: salesViewModel)
+                    }
                 }
-
+                
+                Section{
+                    NavigationLink {
+                        SalesByWeekdayView(salesViewModel: salesViewModel)
+                            .navigationBarTitleDisplayMode(.inline)
+                    } label: {
+                        SimpleSalesByWeekdayView(salesViewModel: salesViewModel)
+                    }
+                }
+                
+                
+                
             }
             .navigationTitle("Your Book Store Stats")
-
+            
         }
     }
 }
