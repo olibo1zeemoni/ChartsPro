@@ -40,9 +40,21 @@ struct SalesPerBookCategoryView: View {
             case .singleBar:
                 Text("1")
             }
+            
+            Button(action: {
+                withAnimation(.bouncy) {
+                    salesViewModel.fetchSalesData()
+                }
+            }, label: {
+                Label("Refresh", systemImage: "arrow.triangle.2.circlepath")
+//                    .labelStyle(.automatic)
+            })
+            .frame(maxWidth: .infinity)
+            .padding(30)
+            
+            Spacer()
         }
         .padding()
-        Spacer()
     }
 }
 

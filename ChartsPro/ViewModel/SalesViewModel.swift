@@ -76,6 +76,11 @@ class SalesViewModel: ObservableObject {
         //do something
     }
     
+    func fetchSalesData() {
+        // TODO: fetch data from server-
+        salesData = Sale.threeMonthsExamples()
+    }
+    
     func salesGroupedByWeek(sales: [Sale]) -> [Date: [Sale]] {
         var salesByWeek: [Date: [Sale]] = [:]
         
