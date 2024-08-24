@@ -124,11 +124,11 @@
 		F57049642C6DCD890069B1AC /* book category stats */ = {
 			isa = PBXGroup;
 			children = (
-				F5D1222D2C77A5D900138BE2 /* SalesPerBookCategoryView.swift */,
-				F5D1222F2C77A5F500138BE2 /* SimpleSalesPerBookCategoryView.swift */,
 				F5D122352C77A75300138BE2 /* SalesPerBookCategoryHeaderView.swift */,
+				F5D1222F2C77A5F500138BE2 /* SimpleSalesPerBookCategoryView.swift */,
 				F5D122312C77A63800138BE2 /* SalesPerBookCategoryPieChartView.swift */,
 				F5D122332C77A65700138BE2 /* SalesPerBookCategoryBarChartView.swift */,
+				F5D1222D2C77A5D900138BE2 /* SalesPerBookCategoryView.swift */,
 			);
 			path = "book category stats";
 			sourceTree = "<group>";
