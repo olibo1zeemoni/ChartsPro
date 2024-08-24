@@ -32,7 +32,15 @@ struct ContentView: View {
                     }
                 }
                 
-                
+                Section {
+                    NavigationLink {
+                        SalesPerBookCategoryView(salesViewModel: salesViewModel)
+                            .navigationBarTitleDisplayMode(.inline)
+                    } label: {
+                        SimpleSalesPerBookCategoryView(salesViewModel: salesViewModel)
+                    }
+
+                }
                 
             }
             .navigationTitle("Your Book Store Stats")

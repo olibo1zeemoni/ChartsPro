@@ -14,7 +14,7 @@ struct SalesPerBookCategoryPieChartView: View {
     var body: some View {
         Chart(salesViewModel.totalSalesPerCategory, id: \.category) { data in
             SectorMark(angle: .value("Book Category", data.sales), innerRadius: .ratio(0.618), angularInset: 1.5)
-                .cornerRadius(15)
+                .cornerRadius(5)
                 .opacity(salesViewModel.bestSellingCategory?.category == data.category ? 1 : 0.3)
                 .foregroundStyle(by: .value("Category", data.category.displayName))
         }
