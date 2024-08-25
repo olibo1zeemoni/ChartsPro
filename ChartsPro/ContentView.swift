@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var salesViewModel = SalesViewModel.preview
+    @StateObject var expensesViewModel = ExpensesViewModel.preview
     
     var body: some View {
         NavigationStack {
@@ -38,6 +39,15 @@ struct ContentView: View {
                             .navigationBarTitleDisplayMode(.inline)
                     } label: {
                         SimpleSalesPerBookCategoryView(salesViewModel: salesViewModel)
+                    }
+
+                }
+                Section {
+                    NavigationLink {
+                        DetailExpensesView(expensesViewModel: .preview)
+                            .navigationBarTitleDisplayMode(.inline)
+                    } label: {
+                        SimpleExpensesLineChartView(expensesViewModel: expensesViewModel)
                     }
 
                 }
