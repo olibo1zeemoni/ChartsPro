@@ -10,6 +10,7 @@ import Charts
 
 struct ExpensesLineChartView: View {
     @ObservedObject var expensesViewModel: ExpensesViewModel
+    let linearGradient = LinearGradient(colors: [.purple.opacity(0.7), .purple.opacity(0.1)], startPoint: .top, endPoint: .bottom)
 
     var body: some View {
         Chart(expensesViewModel.monthlyExpenseData) { data in
@@ -18,6 +19,12 @@ struct ExpensesLineChartView: View {
                 LineMark(x: .value("month", data.month), y: .value("expenses", data.fixedExpenses))
                     .foregroundStyle(by: .value("Expenses", "fixed"))
                     .symbol(by: .value("Expenses", "fixed"))
+                
+                
+//                AreaMark(x: .value("month", data.month), y: .value("expenses", data.fixedExpenses))
+//                    .foregroundStyle(linearGradient)
+                    
+                
                 
                 LineMark(x: .value("month", data.month), y: .value("expenses", data.variableExpenses))
                     .foregroundStyle(by: .value("Expenses", "variable"))
@@ -31,8 +38,41 @@ struct ExpensesLineChartView: View {
         .chartForegroundStyleScale(["fixed": .purple, "variable": .cyan])
         .chartSymbolScale(["fixed": Square().strokeBorder(lineWidth: 2),
                            "variable": Triangle().strokeBorder(lineWidth: 2)])
+        .chartXScale(domain: 1...13)
+        .chartXAxis {
+            AxisMarks(values: [1,4,7,12]) { value in
+                AxisGridLine()
+                AxisTick()
+                if let number = value.as(Int.self) {
+                    AxisValueLabel(month(for: number), centered: true, anchor: .topLeading)
+                }
+            }
+        }
+        .chartYAxis {
+            AxisMarks { value in
+                AxisGridLine()
+                AxisTick()
+                if let number = value.as(Double.self) {
+                    AxisValueLabel("\(Int(number)/1000) k")
+                }
+            }
+        }
+    }
+    
+    let formatter = DateFormatter()
+    
+    func month(for number: Int) -> String {
+        formatter.shortStandaloneMonthSymbols[number - 1]
     }
 }
+
+
+#Preview {
+    ExpensesLineChartView(expensesViewModel: .preview)
+        .padding()
+}
+
+
 
 /// A square symbol for charts.
 struct Square: ChartSymbolShape, InsettableShape {
@@ -101,7 +141,4 @@ struct Triangle: ChartSymbolShape, InsettableShape {
     }
 }
 
-#Preview {
-    ExpensesLineChartView(expensesViewModel: .preview)
-        .padding()
-}
+
